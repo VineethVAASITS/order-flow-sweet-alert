@@ -31,13 +31,13 @@ export const showStatusAlert = (title: string, description: string, type: AlertT
   };
 
   toast({
-    title: (
+    title: title,
+    description: (
       <div className="flex items-center gap-2">
         {getIcon()}
-        <span>{title}</span>
+        <span>{description}</span>
       </div>
     ),
-    description: description,
     variant: getVariant(),
     duration: 3000,
   });
